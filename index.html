@@ -283,4 +283,923 @@
     }
 
     .filter {
-      border: 1px
+      border: 1px solid rgba(255,255,255,.1);
+      background: transparent;
+      color: #aaa6b4;
+      padding: 9px 15px;
+      border-radius: 100px;
+      cursor: pointer;
+    }
+
+    .filter.active,
+    .filter:hover {
+      background: #a855f7;
+      color: white;
+      border-color: #a855f7;
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .project {
+      cursor: pointer;
+    }
+
+    .project.hidden {
+      display: none;
+    }
+
+    .project-image {
+      height: 390px;
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      border: 1px solid rgba(255,255,255,.08);
+      transition: .4s;
+    }
+
+    .project:hover .project-image {
+      transform: translateY(-7px);
+      border-color: rgba(168,85,247,.5);
+    }
+
+    .project:nth-child(3n) {
+      grid-column: span 2;
+    }
+
+    .oracle {
+      background:
+        radial-gradient(circle at 50% 50%, rgba(168,85,247,.55), transparent 25%),
+        radial-gradient(circle at 30% 20%, rgba(42,12,67,.9), transparent 50%),
+        #0b0710;
+    }
+
+    .oracle-circle {
+      position: absolute;
+      width: 270px;
+      height: 270px;
+      border: 1px solid rgba(192,132,252,.6);
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      box-shadow: 0 0 80px rgba(168,85,247,.2);
+    }
+
+    .oracle-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      text-align: center;
+      font-family: 'Space Grotesk';
+      font-size: 25px;
+      letter-spacing: 4px;
+    }
+
+    .chain {
+      background:
+        linear-gradient(120deg, #06101c, #102d48, #06101c);
+      display: grid;
+      place-items: center;
+    }
+
+    .chain h3 {
+      font-family: 'Space Grotesk';
+      font-size: 55px;
+      letter-spacing: -3px;
+    }
+
+    .chain h3 span {
+      color: #36a4ff;
+    }
+
+    .podcast {
+      background:
+        radial-gradient(circle at 50% 100%, rgba(168,85,247,.45), transparent 45%),
+        linear-gradient(145deg,#111018,#050507);
+      display: grid;
+      place-items: center;
+    }
+
+    .podcast-title {
+      text-align: center;
+      font-family: 'Space Grotesk';
+      font-size: 38px;
+      line-height: 1;
+    }
+
+    .podcast-title small {
+      display: block;
+      font-family: 'DM Sans';
+      font-size: 11px;
+      letter-spacing: 5px;
+      color: #a855f7;
+      margin-bottom: 12px;
+    }
+
+    .meme {
+      background: linear-gradient(135deg,#110807,#260d09);
+      display: grid;
+      place-items: center;
+      position: relative;
+    }
+
+    .numbers {
+      font-family: 'Space Grotesk';
+      font-size: 180px;
+      font-weight: 700;
+      letter-spacing: -30px;
+    }
+
+    .numbers .six {
+      color: #111;
+      text-shadow: 0 0 2px white;
+    }
+
+    .numbers .seven {
+      color: #e33;
+    }
+
+    .project-info {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 17px 3px;
+      color: #77727f;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .project h3 {
+      font-family: 'Space Grotesk';
+      font-size: 25px;
+      letter-spacing: -.8px;
+    }
+
+    /* ABOUT */
+
+    .about {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 90px;
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+
+    .about-text {
+      color: #aaa6b4;
+      font-size: 19px;
+      line-height: 1.8;
+    }
+
+    .about-text p + p {
+      margin-top: 25px;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 12px;
+      margin-top: 45px;
+    }
+
+    .skill {
+      border: 1px solid rgba(255,255,255,.09);
+      border-radius: 15px;
+      padding: 20px;
+    }
+
+    .skill strong {
+      display: block;
+      color: #a855f7;
+      margin-bottom: 8px;
+    }
+
+    .skill span {
+      color: #77727f;
+      font-size: 13px;
+    }
+
+    /* SERVICES */
+
+    .services {
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+
+    .service {
+      display: grid;
+      grid-template-columns: 80px 1fr 1fr;
+      gap: 30px;
+      align-items: center;
+      padding: 35px 0;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .service-number {
+      color: #a855f7;
+      font-size: 12px;
+    }
+
+    .service h3 {
+      font-family: 'Space Grotesk';
+      font-size: 28px;
+    }
+
+    .service p {
+      color: #88838f;
+      line-height: 1.6;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      text-align: center;
+      padding: 160px 5%;
+      background:
+        radial-gradient(circle at 50% 100%, rgba(168,85,247,.2), transparent 45%);
+    }
+
+    .contact h2 {
+      font-family: 'Space Grotesk';
+      font-size: clamp(50px, 8vw, 100px);
+      line-height: .9;
+      letter-spacing: -6px;
+    }
+
+    .contact h2 span {
+      color: #a855f7;
+    }
+
+    .contact p {
+      color: #88838f;
+      max-width: 500px;
+      margin: 30px auto;
+      line-height: 1.7;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .socials a {
+      border: 1px solid rgba(255,255,255,.1);
+      padding: 12px 18px;
+      border-radius: 100px;
+      font-size: 13px;
+    }
+
+    .socials a:hover {
+      background: #a855f7;
+      border-color: #a855f7;
+    }
+
+    footer {
+      padding: 30px 5%;
+      border-top: 1px solid rgba(255,255,255,.08);
+      display: flex;
+      justify-content: space-between;
+      color: #66616d;
+      font-size: 12px;
+    }
+
+    /* MOBILE */
+
+    @media(max-width: 800px) {
+
+      nav {
+        padding: 18px 5%;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 130px;
+      }
+
+      h1 {
+        font-size: 56px;
+      }
+
+      .visual {
+        height: 400px;
+      }
+
+      .orb {
+        width: 300px;
+        height: 300px;
+      }
+
+      .work-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project:nth-child(3n) {
+        grid-column: span 1;
+      }
+
+      .project-image {
+        height: 300px;
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .skills {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .service {
+        grid-template-columns: 45px 1fr;
+      }
+
+      .service p {
+        grid-column: 2;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+    <a href="#home" class="logo">RISKIYAT<span>@</span></a>
+
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <a href="#contact" class="nav-button">Let's work</a>
+  </nav>
+
+
+  <!-- HERO -->
+
+  <main>
+
+    <section class="hero container" id="home">
+
+      <div>
+
+        <div class="eyebrow">
+          AI CREATIVE · AUTOMATION · WEB3 · MEDIA
+        </div>
+
+        <h1>
+          I turn ideas into
+          <span>visual stories.</span>
+        </h1>
+
+        <p class="hero-text">
+          I'm Riskiyat — an AI creative, automation builder,
+          Web3 storyteller and digital media creator.
+          I turn complex ideas into cinematic visuals,
+          useful systems and stories people remember.
+        </p>
+
+        <div class="buttons">
+          <a href="#work" class="button primary">
+            Explore my work ↗
+          </a>
+
+          <a href="#contact" class="button secondary">
+            Start a project
+          </a>
+        </div>
+
+      </div>
+
+
+      <div class="visual">
+
+        <div class="orb">
+
+          <div class="orb-center">
+            R@
+          </div>
+
+          <div class="orb-dot d1"></div>
+          <div class="orb-dot d2"></div>
+          <div class="orb-dot d3"></div>
+          <div class="orb-dot d4"></div>
+          <div class="orb-dot d5"></div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- TICKER -->
+
+    <div class="ticker">
+
+      <span>✦</span>
+      AI VIDEO
+
+      <span>✦</span>
+      AI AUTOMATION
+
+      <span>✦</span>
+      WEB3
+
+      <span>✦</span>
+      VISUAL DESIGN
+
+      <span>✦</span>
+      PODCAST
+
+      <span>✦</span>
+      STORYTELLING
+
+    </div>
+
+
+    <!-- WORK -->
+
+    <section class="container" id="work">
+
+      <div class="eyebrow">
+        SELECTED WORK
+      </div>
+
+      <h2 class="section-title">
+        Ideas, made visual.
+      </h2>
+
+
+      <div class="filters">
+
+        <button class="filter active" data-filter="all">
+          All
+        </button>
+
+        <button class="filter" data-filter="video">
+          AI Video
+        </button>
+
+        <button class="filter" data-filter="web3">
+          Web3
+        </button>
+
+        <button class="filter" data-filter="automation">
+          Automation
+        </button>
+
+        <button class="filter" data-filter="media">
+          Media
+        </button>
+
+      </div>
+
+
+      <div class="work-grid">
+
+
+        <!-- ASSET ORACLE -->
+
+        <article class="project" data-category="video web3">
+
+          <div class="project-image oracle">
+
+            <div class="oracle-circle"></div>
+
+            <div class="oracle-text">
+              ASSET<br>
+              ORACLE
+            </div>
+
+          </div>
+
+          <div class="project-info">
+            <span>01 / AI COMMERCIAL</span>
+            <span>Asset Oracle</span>
+          </div>
+
+          <h3>
+            Prediction infrastructure turned into a cinematic world.
+          </h3>
+
+        </article>
+
+
+        <!-- ASSETCHAIN -->
+
+        <article class="project" data-category="web3 video">
+
+          <div class="project-image chain">
+
+            <h3>
+              ASSET<span>CHAIN</span>
+            </h3>
+
+          </div>
+
+          <div class="project-info">
+            <span>02 / WEB3</span>
+            <span>AssetChain</span>
+          </div>
+
+          <h3>
+            Ecosystem storytelling for an RWA network.
+          </h3>
+
+        </article>
+
+
+        <!-- PODCAST -->
+
+        <article class="project" data-category="media video">
+
+          <div class="project-image podcast">
+
+            <div class="podcast-title">
+
+              <small>
+                EDUCATION · CONVERSATION · IDEAS
+              </small>
+
+              ASSETCHAIN<br>
+              PODCAST
+
+            </div>
+
+          </div>
+
+          <div class="project-info">
+            <span>03 / MEDIA</span>
+            <span>Podcast</span>
+          </div>
+
+          <h3>
+            A learning platform built around conversations and ideas.
+          </h3>
+
+        </article>
+
+
+        <!-- 67 -->
+
+        <article class="project" data-category="video web3">
+
+          <div class="project-image meme">
+
+            <div class="numbers">
+              <span class="six">6</span>
+              <span class="seven">7</span>
+            </div>
+
+          </div>
+
+          <div class="project-info">
+            <span>04 / AI STORYTELLING</span>
+            <span>67</span>
+          </div>
+
+          <h3>
+            Cinematic meme culture with a visual universe of its own.
+          </h3>
+
+        </article>
+
+
+        <!-- AUTOMATION -->
+
+        <article class="project" data-category="automation">
+
+          <div class="project-image oracle">
+
+            <div class="oracle-text">
+              AI<br>
+              AUTOMATION
+            </div>
+
+          </div>
+
+          <div class="project-info">
+            <span>05 / AUTOMATION</span>
+            <span>AI Systems</span>
+          </div>
+
+          <h3>
+            Intelligent workflows that turn repetitive work into systems.
+          </h3>
+
+        </article>
+
+
+        <!-- AI STORYTELLING -->
+
+        <article class="project" data-category="video media">
+
+          <div class="project-image chain">
+
+            <h3>
+              AI<br>
+              STORIES
+            </h3>
+
+          </div>
+
+          <div class="project-info">
+            <span>06 / CREATIVE</span>
+            <span>AI Storytelling</span>
+          </div>
+
+          <h3>
+            Characters, worlds and stories created with AI.
+          </h3>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="container about" id="about">
+
+      <div>
+
+        <div class="eyebrow">
+          ABOUT RISKIYAT
+        </div>
+
+        <h2 class="section-title">
+          Creative thinking at the intersection of AI, technology and culture.
+        </h2>
+
+      </div>
+
+
+      <div class="about-text">
+
+        <p>
+          I create cinematic AI videos, visual campaigns,
+          social content, digital experiences and automation
+          systems that turn ideas into something people can
+          understand, feel and remember.
+        </p>
+
+        <p>
+          My work sits between technology and culture —
+          from Web3 ecosystems and AI products to podcast
+          worlds, community campaigns and internet-native
+          storytelling.
+        </p>
+
+
+        <div class="skills">
+
+          <div class="skill">
+            <strong>AI</strong>
+            <span>Creative production</span>
+          </div>
+
+          <div class="skill">
+            <strong>AUTOMATION</strong>
+            <span>AI workflows & agents</span>
+          </div>
+
+          <div class="skill">
+            <strong>WEB3</strong>
+            <span>Brand storytelling</span>
+          </div>
+
+          <div class="skill">
+            <strong>VIDEO</strong>
+            <span>Cinematic content</span>
+          </div>
+
+          <div class="skill">
+            <strong>MEDIA</strong>
+            <span>Podcast & production</span>
+          </div>
+
+          <div class="skill">
+            <strong>DESIGN</strong>
+            <span>Visual experiences</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section class="services" id="services">
+
+      <div class="container">
+
+        <div class="eyebrow">
+          WHAT I DO
+        </div>
+
+        <h2 class="section-title">
+          From concept to final frame.
+        </h2>
+
+
+        <div class="service">
+
+          <div class="service-number">01</div>
+
+          <h3>
+            AI Video Production
+          </h3>
+
+          <p>
+            Cinematic commercials, promotional videos,
+            character scenes, visual storytelling and
+            AI-assisted production.
+          </p>
+
+        </div>
+
+
+        <div class="service">
+
+          <div class="service-number">02</div>
+
+          <h3>
+            AI Automation
+          </h3>
+
+          <p>
+            Intelligent workflows, AI agents, content
+            systems, lead capture and business automation.
+          </p>
+
+        </div>
+
+
+        <div class="service">
+
+          <div class="service-number">03</div>
+
+          <h3>
+            Web3 Creative
+          </h3>
+
+          <p>
+            Ecosystem campaigns, educational content,
+            launch visuals and community storytelling.
+          </p>
+
+        </div>
+
+
+        <div class="service">
+
+          <div class="service-number">04</div>
+
+          <h3>
+            Podcast & Media
+          </h3>
+
+          <p>
+            Podcast concepts, studio worlds, episode
+            visuals, guest scenes and promotional content.
+          </p>
+
+        </div>
+
+
+        <div class="service">
+
+          <div class="service-number">05</div>
+
+          <h3>
+            Visual Design
+          </h3>
+
+          <p>
+            Social creatives, campaign artwork, 3D concepts
+            and branded visual systems.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contact">
+
+      <div class="eyebrow">
+        HAVE AN IDEA?
+      </div>
+
+      <h2>
+        Let's make something
+        <span>people remember.</span>
+      </h2>
+
+      <p>
+        Have a project, campaign, automation or story
+        you want brought to life? Let's create something
+        meaningful.
+      </p>
+
+      <div class="socials">
+
+        <a href="https://x.com/" target="_blank">
+          X / Twitter
+        </a>
+
+        <a href="mailto:your@email.com">
+          Email
+        </a>
+
+        <a href="#work">
+          View Work
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <span>
+      © 2026 Riskiyat. All rights reserved.
+    </span>
+
+    <span>
+      AI · Automation · Web3 · Media
+    </span>
+
+  </footer>
+
+
+  <script>
+
+    const filters = document.querySelectorAll(".filter");
+    const projects = document.querySelectorAll(".project");
+
+    filters.forEach(filter => {
+
+      filter.addEventListener("click", () => {
+
+        filters.forEach(btn =>
+          btn.classList.remove("active")
+        );
+
+        filter.classList.add("active");
+
+        const category = filter.dataset.filter;
+
+        projects.forEach(project => {
+
+          if (
+            category === "all" ||
+            project.dataset.category.includes(category)
+          ) {
+            project.classList.remove("hidden");
+          } else {
+            project.classList.add("hidden");
+          }
+
+        });
+
+      });
+
+    });
+
+  </script>
+
+</body>
+</html>
